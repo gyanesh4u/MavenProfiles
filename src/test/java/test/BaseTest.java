@@ -2,6 +2,7 @@ package test;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -26,6 +27,10 @@ public class BaseTest {
 
 		case "safari":
 			driver = new SafariDriver();
+			break;
+
+		case "firefox":
+			driver = new FirefoxDriver();
 			break;
 
 		default:
