@@ -16,7 +16,7 @@ pipeline {
 			}
 		}
 		stage('Build DEV') {
-			when {
+			 {
 				expression { params.ENVIRONMENT == 'dev' }
 			}
 			steps {
@@ -25,7 +25,7 @@ pipeline {
 		}
 
 		stage('Build QA') {
-			when {
+			 {
 				expression { params.ENVIRONMENT == 'qa' }
 			}
 			steps {
@@ -34,7 +34,7 @@ pipeline {
 		}
 
 		stage('Build UAT') {
-			when {
+			 {
 				expression { params.ENVIRONMENT == 'uat' }
 			}
 			steps {
@@ -43,7 +43,7 @@ pipeline {
 		}
 
 		stage('Build Prod') {
-			when {
+			 {
 				expression { params.ENVIRONMENT == 'prod' }
 			}
 			steps {
